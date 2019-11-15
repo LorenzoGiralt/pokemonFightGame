@@ -1,0 +1,711 @@
+html {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-image: url('images/background.png');
+    background-size: 100% 120%;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+/* Création de la nav menu, pour le positionnement seulement. */
+.nav_left {
+    position: absolute;
+    left: 0;
+    width: 12.5%;
+    height: 100vh;
+    background-color: rgba(39, 38, 38, 0.911);
+    border-right: 1px solid rgba(29, 28, 28, 0.774);
+    transition: ease-in 0.5s;
+}
+.prez {
+    font-size:23px;
+    color:white;
+    text-shadow:0px 1px 0px black;
+}
+.hiddenVisible {
+    width: 100%;
+    transition: ease-in 0.7s;
+    height: 100%;
+}
+
+/* Container du menu */
+.container_nav_left {
+    width: 90%;
+    height: 100vh;
+    margin: 0;
+    margin: auto;
+    transition: ease-in 0.5s;
+}
+
+.container_nav_right {
+    width: 90%;
+    height: 100vh;
+    margin: 0;
+    margin: auto;
+    transition: ease-in 0.5s;
+}
+
+/* Menu player */
+.container_icones {
+    width: 90%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0px 1px 0px rgb(14, 15, 15); */
+    cursor: pointer;
+    transition: ease-in 0.5s;
+}
+
+.container_icones:hover {
+    transition: ease-in 0.5s;
+    border-radius: 25px;
+    zoom: 1.2;
+    background-color: rgba(173, 243, 243, 0.719);
+}
+
+/* Css du li dans le menu */
+li {
+    margin: 0;
+    list-style: none;
+}
+
+.close_nav {
+    left: 0;
+    width: 12.5%;
+    position: absolute;
+    background-color: rgba(160, 37, 37, 0.808);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-in 0.5s;
+}
+
+.close_nav:hover {
+    background-color: rgb(214, 99, 99);
+    transition: ease-in 0.5s;
+}
+
+.espacement {
+    height: 55px;
+    width: 100%;
+}
+
+.espacementRight {
+    height: 15px;
+    width: 100%;
+}
+
+h3 {
+    font-size: 100%;
+}
+
+.nav_bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 87.3%;
+    height: 15vh;
+    transition: ease-in 0.5s;
+    border-right: 1px solid rgba(29, 28, 28, 0.815);
+    border-top: 1px solid rgba(29, 28, 28, 0.815);
+    background-color: rgba(39, 38, 38, 0.911);
+}
+
+.nav_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12.5%;
+    height: 84.7vh;
+    background-color: rgba(39, 38, 38, 0.911);
+    border-right: 1px solid rgba(29, 28, 28, 0.774);
+    transition: ease-in 0.5s;
+}
+
+.close_nav_right {
+    right: 0;
+    width: 12.5%;
+    position: absolute;
+    background-color: rgba(160, 37, 37, 0.808);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-in 0.5s;
+}
+
+.close_nav_right:hover {
+    background-color: rgb(214, 99, 99);
+    transition: ease-in 0.5s;
+}
+
+.Arcade {
+    width: 74%;
+    margin: 0 auto;
+    height: auto;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+audio {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.arene {
+    flex-wrap: nowrap;
+    margin: auto;
+    width: 99%;
+    margin-top: 1px;
+    height: 66vh;
+    border: 5px solid rgb(255, 253, 253);
+    background-image: url("pokemon/battle13v1.png");
+    background-size: 100% 100%;
+}
+
+.choiceAtk {
+    margin: auto;
+    width: 99%;
+    height:16.4vh;
+    display: flex;
+    align-items: center;
+    flex-direction: nowrap;
+    background-color: rgb(255, 255, 255);
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+.ennemyBar {
+    width: 100%;
+    height: 50%;
+}
+
+.playerBar {
+    width: 100%;
+    height: 50%;
+}
+
+.ennemy {
+    padding: 1%;
+    margin-top: 0px;
+    margin-right: 1%;
+    float: right;
+    width: 60%;
+    height: auto;
+}
+
+.player {
+    padding: 1%;
+    margin-left: 2%;
+    margin-top: 1%;
+    float: left;
+    width: 60%;
+    height: 85%;
+}
+
+object {
+    height: 0px;
+    visibility: hidden;
+}
+
+.barHero {
+    margin-top: -80px;
+    margin-left: -15px;
+    width: 48%;
+    overflow: hidden;
+    max-width: 48%;
+    padding: 5px;
+    height: auto;
+    border: 3px solid rgba(255, 255, 255, 0.822);
+    box-shadow: -1px 1px 5px 2px rgba(0, 0, 0, 0.664);
+    background-color: rgba(0, 0, 0, 0.514);
+    /* border-radius: 28px; */
+}
+
+.barHero1 {
+    width: 48%;
+    float: right;
+    height: auto;
+    padding: 5px;
+    overflow: hidden;
+    max-width: 48%;
+    border: 3px solid rgba(255, 255, 255, 0.822);
+    box-shadow: -1px 1px 5px 2px rgba(0, 0, 0, 0.664);
+    background-color: rgba(0, 0, 0, 0.514);
+    /* border-radius: 28px; */
+}
+
+#full1,
+#full2 {
+    z-index:999;
+    cursor: pointer;
+}
+
+.full {
+    z-index:999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#full {
+    z-index:999;
+    padding-top: 10px;
+
+
+}
+
+#full4 {}
+
+img {
+    margin: 0;
+
+}
+
+#full2 {
+    z-index:999;
+
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    padding: 5px;
+}
+
+.levelBar {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: ease-in 0.5s;
+
+}
+
+.healtBar {
+    text-align: center;
+    border-top: 1px solid rgba(97, 93, 93, 0.63);
+    width: 100%;
+    transition: ease-in 0.5s;
+    height: 50%;
+    background-color: rgba(0, 255, 64, 0.5);
+}
+
+
+.nameBar {
+    color: white;
+}
+
+.staminaBar {
+    border-top: 1px solid rgba(97, 93, 93, 0.63);
+    width: 100%;
+    transition: ease-in 0.8s;
+
+    height: 50%;
+    background-color: rgba(0, 204, 255, 0.5);
+}
+
+#anim {
+    margin-left: 0px;
+
+    width: 100%;
+    height: 100%;
+    transition:1s;
+}
+
+#animE {
+    margin-top:-100px;
+    margin-left: 15px;
+        width: 100%;
+    height: 100%;
+    transition:1s;
+
+}
+
+.expBar {
+    border-top: 1px solid rgba(97, 93, 93, 0.63);
+    width: 0%;
+    transition: ease-in 0.8s;
+    height: 50%;
+    background-color: rgba(204, 0, 255, 0.5);
+}
+
+.pokemonEnnemyBar {
+display:flex;
+justify-content: flex-end;
+align-items: flex-end;
+width: 60%;
+margin:auto;
+height: 107%;
+transition:1s;
+
+}
+
+
+.pokemonPlayerBar {
+    float: right;
+    margin-right: 100px;
+    margin-top: 30px;
+    width: 40%;
+    transition: 1s;
+    height: 50%;
+    transition:1s;
+
+}
+
+.full {
+    display: none;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+a:hover {
+    transition: ease-in 0.8s;
+    color: rgb(105, 158, 243);
+}
+
+.texte {
+    width:100%;
+    color: white;
+    text-shadow: 0px 2px 0px black;
+    font-size: 18px;
+    height: 50%;
+    background-color: rgb(58, 53, 53);
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0px 0px 2px 0px #000000;
+}
+
+h2 {
+    margin: 0;
+}
+
+.texte:hover {
+    color: rgb(124, 243, 164);
+    transition: ease-in 0.2s;
+}
+
+.texte1:hover {
+    color: rgb(124, 243, 164);
+    transition: ease-in 0.2s;
+}
+
+.texte1 {
+    width:100%;
+    color: white;
+    text-shadow: 0px 2px 0px black;
+    font-size: 18px;
+    height: 50%;
+    background-color: rgb(58, 53, 53);
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0px 0px 2px 0px #000000;
+}
+.texte p {
+    position:relative;
+    left:10px;
+    top:10px;
+    margin:0;
+}
+.texte1 p {
+    position:relative;
+    left:10px;
+    top:10px;
+    margin:0;
+}
+
+audio {
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    width: 55%;
+    margin-top: 3px;
+}
+
+.blockLeft {
+    height: 16.5vh;
+    width: 50%;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+    /* background-color:green; */
+}
+
+.miniLeft {
+height:100%;
+display:flex;
+align-items: center;
+flex-direction: column;
+width: 50%;
+}
+
+.miniTop {
+    margin: auto;
+    width: 96%;
+    height: 7vh;
+    cursor: pointer;
+    display: flex;
+    z-index:1;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 2px 0px black;
+    background-color: grey;
+    color: white;
+    font-size: 19px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-bottom: 7px;
+    border: 4px solid white;
+    -moz-box-shadow: inset 0 0 11px #ffffffad;
+    -webkit-box-shadow: inset 0 0 11px #ffffffad;
+    box-shadow: inset 0 0 11px #ffffffad;
+
+}
+/* Les propositions, combattre, reprendre etc.. */
+#potion {
+    background-color:rgb(42, 41, 41);
+    cursor:pointer;
+    transition:0.4s;
+    display:none;
+}
+#next {
+    background-color:rgb(42, 41, 41);
+    cursor:pointer;
+    display:none;
+    transition:0.4s;
+    box-shadow:-1px 2px 7px black;
+    text-shadow:0px 1px 0px black;
+}
+#reprendre {
+    background-color:rgb(42, 41, 41);
+    cursor:pointer;
+    transition:0.4s;
+    display:none;
+}
+#fuir {
+    display:none;
+    background-color:rgb(42, 41, 41);
+    cursor:pointer;
+    transition:0.4s;
+    box-sizing: border-box;
+
+}
+a {
+    margin:0;
+    padding:0;
+}
+.miniBop {
+    width: 96%;
+    margin: auto;
+    height: 7vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 2px 0px black;
+    background-color: grey;
+    z-index:1;
+    color: white;
+    border: 4px solid white;
+    -moz-box-shadow: inset 0 0 11px #ffffffad;
+    -webkit-box-shadow: inset 0 0 11px #ffffffad;
+    box-shadow: inset 0 0 11px #ffffffad;
+    font-size: 19px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.miniBop:hover {
+    transition: ease-in 0.4s;
+    background-color: rgba(235, 98, 98, 0.801);
+}
+
+.miniTop:hover {
+    transition: ease-in 0.4s;
+    background-color: rgba(94, 132, 238, 0.692);
+}
+
+.miniRight {
+    height:100%;
+    z-index:1;
+
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+/* Block de droite  des attaque */
+.blockRight {
+    display: flex;
+    align-items: center;
+    z-index:1;
+
+    height: 16.5vh;
+    width: 50%;
+    background-color: rgb(58, 53, 53);
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+}
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+button {
+    color: white;
+}
+.goBack {
+    float: left;
+    color: white;
+    padding: 12px;
+    margin-left: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #3498DB;
+    margin-right: 35px;
+    text-decoration: none;
+    width: 125px;
+    border-style: none;
+    box-shadow: inset 0 -0.15em 0 rgba(0, 0, 0, 0.2);
+}
+
+.goBack a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 640px) {
+
+    .close_nav {
+    font-size: 7px;
+    }
+
+    .arene {
+        width: 97%;
+        height: 44vh;
+    }
+    .blockLeft {
+        width:100%;
+        height:60%;
+    }
+    .texte {
+        font-size:13px;
+    }
+    .texte1 {
+        font-size:13px;
+
+    }
+    .blockRight {
+        width:100%;
+        height:60%;
+    }
+    .miniTop {
+        font-size:13px;
+    }
+    .miniBop {
+        font-size:13px;
+
+    }
+
+    .choiceAtk {
+        margin: auto;
+        width: 97%;
+        height:38vh;
+        -moz-box-shadow: inset 0 0 10px #000000;
+        -webkit-box-shadow: inset 0 0 10px #000000;
+        box-shadow: inset 0px 0px 2px 0px #000000;
+        background-color: rgb(58, 53, 53);
+        display:flex;
+        flex-direction: column;
+    }
+
+    .pokemonEnnemyBar {
+        margin-top: -60px;
+        transition:1s;
+    }
+
+    .prez {
+        font-size:12px;
+    }
+
+    .pokemonPlayerBar {
+        float: right;
+        margin-right: 90px;
+        margin-top: 30px;
+        width: 40%;
+        transition: 1s;
+        height: 50%;
+    }
+    #anim {
+        position: fixed;
+        margin-left: -20px;
+        top: 120px;
+        width: 200px;
+        height: 100px;
+        transition:1s;
+
+    }
+    #animE {
+        position: fixed;
+        margin-left: 15px;
+        top: 150px;
+        width: 200px;
+        height: 100px;
+        transition:1s;
+
+    }
+    .barHero {
+        margin-top: -80px;
+        margin-left: 0px;
+        width: 55%;
+        max-width: 55%;
+        padding: 2px;
+        height: auto;
+        border: 1px solid rgba(255, 255, 255, 0.822);
+    }
+    .barHero1 {
+        margin-top: 2px;
+        margin-left: 0px;
+        width: 55%;
+        max-width: 55%;
+        padding: 2px;
+        height: auto;
+        border: 1px solid rgba(255, 255, 255, 0.822);
+    }
+}
+
